@@ -1,0 +1,66 @@
+body,p,ol,ul,li,dl,dt,dd,form,table,tr,th,td,hr,h1,h2,h3,h4,h5,h6,input,fieldset,legend{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	display: block;
+}
+body{
+	position:relative;
+}
+ul, ol{
+	list-style: none;
+}
+html{
+	/*overflow-x: hidden; */
+}
+/*大盒子布局*/
+.big{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+/*上部盒子*/
+.boxtop{
+	width:100%;
+	height:156px;
+	background-color: pink;
+	overflow: hidden;
+}
+.boxtop_one{
+	width:1235px;   /*1664*/
+	height:107px;	/*156*/
+	background-color: white;
+	/*padding:49px 0 0 223px;*/
+	margin:49px auto 0;
+}
+.boxtop_one img{
+	width:121px;
+	height:75px;
+}
+/*中部盒子*/
+
+.boxcenter{
+	width:100%;
+	height:580px;
+	background-color: red;
+	background:url(../img/l1.jpg) no-repeat;
+	margin:0 auto;
+}
+
+/*下部盒子*/
+.boxbottom{
+	width:100%;
+	height:139px;   /*201*/
+	background-color: gray;
+	text-align: center;
+	padding-top:62px;
+}
+.boxbottom p{
+	font-size: 14px;
+	color: #a2a2a2;
+	line-height: 26px;
+}
