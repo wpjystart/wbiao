@@ -7,7 +7,6 @@
 </head>
 <body>
 	<!-- 大盒子 -->
-	<div class="big">
 		<!-- 上部盒子 -->
 		<div class="boxtop">
 			<div class="boxtop_one">
@@ -15,13 +14,77 @@
 			</div>
 		</div>
 		<!-- 中部盒子 -->
-		<div class="boxcenter"></div>
+		<div class="boxcenter">
+			<div class="center_one">
+				<div class="center_one_top">
+					<a href="#"><span>会员登录</span></a>
+					<span>|</span>
+					<a href="#"><span>扫码登录</span></a>
+				</div>
+				<!-- 一开始显示登录界面 -->
+				<div class="center_one_center">
+					<!-- 手机号码 -->
+					<input type="text" placeholder="手机号码">
+					<!-- 获取验证码 -->
+					<div class="center_one_center1">
+						<input type="text" placeholder="短信验证">
+						<a href="#">获取验证码</a>
+					</div>	
+					<!-- 立即登录 -->
+					<a href="#">立即登录</a>
+					<p>免费注册</p>
+					<div class="center_one_bottom">
+						<a href="#">账号密码</a>
+						<span>|</span>
+						<a href="#">社交登录</a>
+					</div>
+				</div>
+				<!-- 隐藏的扫码登录 -->
+				<div class="center_one_center_hid">
+					<!-- 二维码 -->
+					<div class="center_one_center_hid1">
+						<img src="img/l4.png" id="qqq"/><!-- 划过它 进行位移 -->
+						<img src="img/l5.png" id="www"/><!-- 划过二维码显示 -->
+					</div>
+					<!-- 二维码下部 -->
+					<div class="center_one_center_hid2">
+						<h4>使用<a href="#">万表APP</a>扫码登录</h4>
+						<span>在首页顶部搜索栏点击扫一扫</span>
+						<div class="center_one_center_hid2_min">
+							<p>下载万表APP</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- 下部盒子 -->
 		<div class="boxbottom">
 			<p>万表网名表商城 版权所有 2008-2017 ICP备案证书号:粤ICP备09108738号 网监备案:4401060103141</p>
 			<p>广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
 			<p>Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
 		</div>
-	</div>
 </body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	// 点击会员登录出现界面
+$(".center_one_top a:first").click(function(){
+	$(".center_one_center").show()
+	$(".center_one_center_hid").hide()
+})
+	// 点击扫码登录出现界面
+$(".center_one_top a:last").click(function(){
+	$(".center_one_center").hide()
+	$(".center_one_center_hid").show()
+})
+	// 鼠标滑过二维码
+$("#qqq").mouseover(function(){
+	$("#qqq").animate({left:'-78px'});
+	$("#www").show(500)
+});
+	// 鼠标离开二维码
+$("#qqq").mouseout(function(){
+	$("#qqq").animate({left:'+78px'});
+	$("#www").hide(500)
+});
+</script>

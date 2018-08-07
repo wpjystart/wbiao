@@ -15,26 +15,18 @@ ul, ol{
 	list-style: none;
 }
 html{
-	/*overflow-x: hidden; */
-}
-/*大盒子布局*/
-.big{
-	width:100%;
-	height:100%;
-	margin:0 auto;
+	overflow-x: hidden; 
 }
 /*上部盒子*/
 .boxtop{
 	width:100%;
 	height:156px;
-	background-color: pink;
 	overflow: hidden;
 }
 .boxtop_one{
-	width:1235px;   /*1664*/
-	height:107px;	/*156*/
+	width:990px;   
+	height:107px;	
 	background-color: white;
-	/*padding:49px 0 0 223px;*/
 	margin:49px auto 0;
 }
 .boxtop_one img{
@@ -46,16 +38,177 @@ html{
 .boxcenter{
 	width:100%;
 	height:580px;
-	background-color: red;
-	background:url(../img/l1.jpg) no-repeat;
+	background:url(../img/l1.jpg) no-repeat center;
+	border-bottom: 1px solid #a7a8b9;
+	position:relative;
+	
+}
+/*中部里小盒子*/
+.center_one{
+	width:380px;
+	height:460px;
+	position: absolute;
+	right:157px;
+	top:60px;
+	background-color:white;
+}
+/*一开始显示登录界面-------------------*/
+/*小盒子上层 会员登录*/
+.center_one_top{
+	width:221px;   /*380*/
+	height:46px;	/*86*/
+	padding:40px 80px 0 79px;
+}
+.center_one_top span:nth-child(1){
+	font-size:20px; 
+	color:#cc5252;
+}
+.center_one_top span:nth-child(2){
+	font-size: 20px;
+	margin: 0 23px;
+}
+.center_one_top span:nth-child(3){
+	font-size:20px; 
+	color:#808080;
+}
+/*小盒子中层*/
+.center_one_center{
+	width:304px;   /*380*/
+	height:209px;
+	text-align: center;
+	padding:0 36px;
+	/*display:none;*/
+}
+/*手机号码*/
+.center_one_center>input{
+	width:298px;   /*298*/
+	height:40px;
+	margin:12px 0 20px 0;
+	text-indent: 4px;
+}
+/*获取验证码*/
+.center_one_center1{
+	width:302px;  
+	height:44px;
+	margin:0 auto 12px;
+
+}
+.center_one_center1 input{
+	width:196px;
+	height:40px;
+	display:inline-block;
+	float:left;
+	margin-right:4px;
+	text-indent: 4px;
+}
+.center_one_center1 a{
+	display:block;
+	width:98px;
+	height:44px;
+	background-color:#b1b1b1;
+	color:#fff;
+	line-height: 44px;
+	float:left;
+	font-size: 14px;
+	text-align: center;
+}
+/*立即登录*/
+.center_one_center>a{
+	display: block;
+	width: 302px;
+	height:44px;
+	background-color:#cc5252;
+	color: #fff;
+	text-align: center; 
+	line-height: 44px;
 	margin:0 auto;
+}
+.center_one_center p{
+	font-size: 14px;
+	color: #999;
+	float: left;
+	margin-top: 17px;
+	cursor: pointer;
+}
+/*小盒子下层*/
+.center_one_bottom{
+	width:142px;
+	height:23px;
+	margin-top: 156px ;
+	float: right;
+
+}
+.center_one_bottom span{
+	font-size: 16px;
+	color: #cce0f0;
+}
+.center_one_bottom a{
+	font-size: 16px;
+	color: #999;
+}
+/*隐藏的扫码登录-----------------------------*/
+.center_one_center_hid{
+	width:380px;
+	height:374px;
+	background-color:#fff;
+	display:none;
+}
+/*二维码*/
+.center_one_center_hid1{
+	width:340px;    /*380*/
+	height:186px;    /*226*/
+	padding:20px 20px;
+	text-align: center;
+}
+#qqq{
+	display:inline-block;
+	width:183px;
+	height:183px;
+}
+#www{
+	width:148px;
+	height:185px;
+	float: right;
+	display: none;
+}
+/*二维码下部*/
+.center_one_center_hid2{
+	width:380px;
+	height:149px;
+	text-align: center;
+}
+.center_one_center_hid2 h4,span{
+	font-size: 16px;
+	color: #999;
+	font-weight: 100;
+}
+.center_one_center_hid2 span{
+	display: block;
+	margin-bottom:28px;
+}
+.center_one_center_hid2 a{
+	font-size: 16px;
+	color: #cc5252;
+}
+.center_one_center_hid2_min{
+	width:160px;
+	height:40px;
+	border:1px solid #999;
+	border-radius: 30px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.center_one_center_hid2_min p{
+	font-size: 16px;
+	color: #666;
+	text-align: center;
+	line-height: 40px;
 }
 
 /*下部盒子*/
 .boxbottom{
 	width:100%;
 	height:139px;   /*201*/
-	background-color: gray;
 	text-align: center;
 	padding-top:62px;
 }
