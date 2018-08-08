@@ -1,0 +1,191 @@
+body,p,ol,ul,li,dl,dt,dd,form,table,tr,th,td,hr,h1,h2,h3,h4,h5,h6,input,fieldset,legend{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	display: block;
+}
+body{
+	position:relative;
+}
+ul, ol{
+	list-style: none;
+}
+html{
+	overflow-x: hidden; 
+}
+.box{
+	width:100%;
+	height:100%;
+	background-color: #fafafa;
+}
+/*上部盒子*/
+.top{
+	width:990px;
+	height:155px;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+.top img:nth-child(1){
+	width:121px;
+	height:75px;
+	float: left;
+	padding-top: 44px;
+}
+.top img:nth-child(2){
+	width:175px;
+	height:75px;
+	float: left;
+	padding-top: 44px;
+}
+/*下部盒子*/
+.bottom{
+	width:990px;
+	height:554px;
+	margin:0 auto;
+	text-align: center;
+	border-top: 1px solid #f0f0f0;
+}
+h3{
+	font-size: 28px;
+	color: #000;
+	padding:52px 0 43px 0;
+	font-weight: 100;
+}
+.bottom input{
+	width:336px;
+	height:38px;
+	text-indent: 32px;
+	border: 1px solid #ddd; 
+	outline: none;
+}
+.input5 input{
+	text-indent: 10px;
+}
+/*定位框里的盾牌*/
+.input1{
+	position: relative;
+}
+.input1 img{
+	width:13px;
+	height:15px;
+	position: absolute;
+	left:335px;
+	top:13px;
+}
+.input2{
+	position: relative;
+}
+.input2 img{
+	width:13px;
+	height:15px;
+	position: absolute;
+	left:335px;
+	top:22px;
+}
+.input3{
+	position: relative;
+}
+.input3 img{
+	width:13px;
+	height:15px;
+	position: absolute;
+	left:335px;
+	top:13px;
+}
+.input4{
+	position: relative;
+}
+.input4 img{
+	width:13px;
+	height:15px;
+	position: absolute;
+	left:335px;
+	top:13px;
+}
+
+/*隐藏的报错*/
+.bottom h4{
+	font-size: 10px;
+	color: red;
+	line-height: 27px;
+	margin-left: -207px;
+	background: url(../img/r3.png) no-repeat 533px 6px;
+	display:none;
+}
+.input2 h4{
+	padding-bottom: 5px;
+	font-size: 10px;
+	color: red;
+	line-height: 21px;
+	margin-left: -226px;
+	background: url(../img/r3.png) no-repeat 554px 4px;
+}
+.input3 h4{
+	font-size: 10px;
+	color: red;
+	line-height: 27px;
+	margin-left: -138px;
+	background: url(../img/r3.png) no-repeat 466px 7px;
+}
+.input4{
+	margin:8px 0 16px 0;
+}
+.input4 h4{
+	font-size: 10px;
+	color: red;
+	line-height: 27px;
+	margin-left: -211px;
+	background: url(../img/r3.png) no-repeat 539px 7px;
+}
+#passiden{
+	/*display:none;*/
+	font-size: 10px;
+	color: red;
+	line-height: 27px;
+	margin-left: -211px;
+	background: url(../img/r3.png) no-repeat 539px 7px;
+}
+.input5 h4{
+	font-size: 10px;
+	color: red;
+	line-height: 27px;
+	margin-left: -175px;
+	background: url(../img/r3.png) no-repeat 504px 7px;
+}
+.input2 input{
+	width:228px;
+	height:38px;
+	margin:8px 0;
+}
+.input2 a{
+	display:inline-block;
+	width:100px;
+	height:38px;
+	background-color:white;
+	font-size:12px;
+	color:#333;
+	line-height: 38px; 
+	border:1px solid #ddd;
+}
+#reg{
+	display: inline-block;
+	width:340px;
+	height:41px;
+	background-color:#b32424;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+	margin:28px;
+}
+.spa{
+	font-size:10px; 
+	color:#999;
+}
+.spa a{
+	font-size:12px; 
+	color:#000;
+}

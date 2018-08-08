@@ -5,6 +5,7 @@
 	<title>login</title>
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
+<!-- 写道就是最下部 -->
 <body>
 	<!-- 大盒子 -->
 		<!-- 上部盒子 -->
@@ -33,12 +34,41 @@
 					<!-- 立即登录 -->
 					<a href="#">立即登录</a>
 					<p>免费注册</p>
+					<!-- 下部账户密码登录 -->
 					<div class="center_one_bottom">
-						<a href="#">账号密码</a>
+	<!-- 点击跳出账户 -->	<a href="#" id="eee">账号密码</a>
 						<span>|</span>
 						<a href="#">社交登录</a>
 					</div>
 				</div>
+	<!-- 点击账户登录跳出界面--------------- -->
+				<div class="login_one">
+					<!-- 隐藏的内容须点击 -->	<!-- 手机号码 -->
+					<div class="phone">
+						<input type="text" placeholder="手机号码/会员名/邮箱" id="rrt">
+<!-- 为空弹出内容 -->		<p id="ttt">请输入用户名</p>
+						<p id="yyy">会员不存在或密码不正确</p>
+					</div>
+
+					<!-- 获取验证码 -->
+					<div class="login_one1">
+						<input type="text" placeholder="密码">
+					</div>	
+					<!-- 立即登录 -->
+<!-- 正则验证处 -->	<a href="#" id="rrr">立即登录</a>
+					<p>免费注册</p>	
+					<h6>忘记密码</h6>
+					<div class="login_one_bottom">
+						<div class="login_one_bottom1">
+							<a href="#">手机动态登录</a>
+							<span>|</span>
+							<a href="#">社交登录</a>
+						</div>
+						
+					</div>
+				</div>
+<!-- -------------------------- -->
+				
 				<!-- 隐藏的扫码登录 -->
 				<div class="center_one_center_hid">
 					<!-- 二维码 -->
@@ -67,24 +97,61 @@
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
+
 	// 点击会员登录出现界面
 $(".center_one_top a:first").click(function(){
 	$(".center_one_center").show()
 	$(".center_one_center_hid").hide()
+	$(".login_one").hide()
 })
 	// 点击扫码登录出现界面
 $(".center_one_top a:last").click(function(){
 	$(".center_one_center").hide()
 	$(".center_one_center_hid").show()
+	$(".login_one").hide()
 })
 	// 鼠标滑过二维码
 $("#qqq").mouseover(function(){
 	$("#qqq").animate({left:'-78px'});
-	$("#www").show(500)
+	$("#www").show(800)
 });
 	// 鼠标离开二维码
 $("#qqq").mouseout(function(){
 	$("#qqq").animate({left:'+78px'});
-	$("#www").hide(500)
+	$("#www").hide(800)
 });
+// 点击下部账户密码登录出现界面
+$("#eee").click(function(){
+	$(".login_one").show()
+	$(".center_one_center").hide()
+})
+// 点击下部账户密码登录出现界面  点击登录判断
+// $("#rrr").click(function(){
+// 	var str = /^1[0-9]{10}$/ || /^\w+@\w+\.(com|cn|net)$/ || ;   
+// 	if($("#rrt").val()==""){
+// 		$("#ttt").show()
+// 		$("#rrt").css("margin-bottom","0");
+// 	}else if(str.test($(this).val())==false){
+// 		$("#yyy").show()
+// 		$("#rrt").css("margin-bottom","0");
+// 	}
+// })
+// 正则判断文本框内容
+// $(".input5 input").blur(function(){
+// 	var str = /^1[0-9]{10}$/;
+// 	
+// 	
+// 	if(str.test($(this).val())==false){
+// 		$(".input5 h4").css("display","block")
+// 	}
+// 	$("#reg").css("margin-top","0");
+// })
+
+
+// $("#rrr").click(function(){
+// 	if(($("#rrt").val())==""){
+// 		$("#ttt").text("请输入用户名")
+// 	}
+// })
+
 </script>

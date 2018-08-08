@@ -77,7 +77,10 @@ html{
 	height:209px;
 	text-align: center;
 	padding:0 36px;
-	/*display:none;*/
+	display:none;
+}
+.center_one_center input{
+	outline: none;
 }
 /*手机号码*/
 .center_one_center>input{
@@ -104,6 +107,7 @@ html{
 .center_one_center1 a{
 	display:block;
 	width:98px;
+
 	height:44px;
 	background-color:#b1b1b1;
 	color:#fff;
@@ -204,6 +208,87 @@ html{
 	text-align: center;
 	line-height: 40px;
 }
+/*点击跳出账户内容-----------------------*/
+.login_one{
+	width:304px;   /*380*/
+	height:215px;
+	text-align: center;
+	padding:0 38px;
+	/*display:none;*/
+
+}
+.login_one input{
+	outline: none;
+}
+#rrt{
+	width:298px;   /*298*/
+	height:40px;
+	margin:12px 0 18px 0;
+	text-indent: 4px;
+
+}
+/*为空弹出内容*/
+#ttt{
+	font-size: 12px;
+	line-height: 35px;
+	display: none;
+	color: red;
+	text-indent: 10px;
+}
+#yyy{
+	font-size: 12px;
+	line-height: 35px;
+	display: none;
+	color: red;
+	text-indent: 10px;
+}
+.login_one1 input{
+	width:298px;   /*298*/
+	height:40px;
+	margin-bottom:20px;
+	text-indent: 4px;
+}
+.login_one>a{
+	display: block;
+	width: 302px;
+	height:44px;
+	background-color:#cc5252;
+	color: #fff;
+	text-align: center; 
+	line-height: 44px;
+	margin:0 auto 13px;
+}
+.login_one p{
+	font-size: 12px;
+	color: #999;
+	display:inline-block;
+	float: left;
+	cursor: pointer;
+}
+.login_one h6{
+	font-size: 12px;
+	color: #999;
+	float: right;
+	font-weight: 100;
+	cursor: pointer;
+}
+.login_one_bottom{
+	width:262px;
+	height:46px;  /*159*/
+	padding:133px 40px 0 40px;
+}
+.login_one_bottom1{
+	width:186px;
+	height:19px;
+	float: right;
+}
+.login_one_bottom a{
+	font-size: 16px;
+	color: #999;
+}
+.login_one_bottom span{
+	font-size: 16px;
+}
 
 /*下部盒子*/
 .boxbottom{
@@ -217,3 +302,12 @@ html{
 	color: #a2a2a2;
 	line-height: 26px;
 }
+
+
+
+/*$("#rrr").click(function(){
+	if(($("#rrt").val())==""){
+		$("#ttt").text("请输入用户名")
+	}
+})*/
+	

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="css/reg.css"/>
+</head>
+<body>
+	<!-- 背景大盒子 -->
+	<div class="box">
+		<!-- 上部盒子 -->
+		<div class="top">
+			<img src="img/2.png">
+			<img src="img/3.png">
+		</div>
+		<!-- 下部盒子 -->
+		<div class="bottom">
+			<h3>注册万表会员</h3>
+			<form action="">
+				<div class="input1">
+					<input type="text" placeholder="请输入手机号"><br/>
+					<img src="img/r1.png"/>
+					<h4>请输入你的手机号</h4>
+				</div>
+
+				<div class="input2">
+					<input type="text" placeholder="请输入短信验证码">
+					<a href="#">获取验证码</a><br/>
+					<img src="img/r1.png"/>
+					<h4>请输入验证码</h4>
+				</div>
+				
+				<!-- 设置密码 -->
+				<div class="input3">
+					<input type="password" placeholder="请设置密码"><br/>
+					<img src="img/r1.png"/>
+					<h4>密码应为6-20位任意字符组合</h4>
+					<!-- <img src="img/r7.png" id="eye"> -->
+				</div>
+				<!-- 再次设置密码 -->
+				<div class="input4">
+					<input type="password" placeholder="请再次输入密码"><br/>
+					<img src="img/r1.png"/>
+					<h4 id="passiden1">两次密码不一致</h4>
+					<h4 id="passiden">两次相同</h4>
+				</div>
+				
+				<div class="input5">
+					<input type="text" placeholder="如有推荐人，请输入推荐人手机号"><br/>
+					<h4>请输入正确的手机号码</h4>
+				</div>
+				
+				<a href="#" id="reg">立即注册</a><br/>
+				<span class="spa">点击“立即注册”，即表示您同意并愿意遵守<a href="#">万表网用户协议</a></span>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+// 判断手机号
+// 条件是11位  必须以1开头
+$(".input1 input").blur(function(){
+	var str = /^1[0-9]{10}$/;
+	if(str.test($(this).val())==false){
+		$(".input1 h4").css("display","block")
+	}
+	// $(".input1").css("margin-bottom","0");
+})
+// 短信内容不能为空
+$(".input2 input").blur(function(){
+	var str = /^[0-9]{5}$/;
+	if(str.test($(this).val())==false){
+		$(".input2 h4").css("display","block")
+	}
+	$(".input2").css("margin-top","0");
+})
+// 设置密码
+$(".input3 input").blur(function(){
+	var str = /^\w{6,20}$/;
+	if(str.test($(this).val())==false){
+		$(".input3 h4").css("display","block")
+	}else if(str.test($(this).val())==""){
+		$(".input3 h4").css("display","block")
+	}
+	// $(".input3").css("margin-bottom","0");
+})
+// 重复密码
+$(".input4 input").blur(function(){
+	if($(".input4 input").val() == $(".input3 input").val()){
+		$(".input4 h4").css("display","none");
+		$("#passiden").css("display","block");
+		$(".input4").css("margin-bottom","0");
+	}else{
+		$(".input4 h4").css("display","block");
+		$("#passiden").css("display","none");
+		$(".input4").css("margin-bottom","0");
+	}
+})
+// 推荐人手机号
+$(".input5 input").blur(function(){
+	var str = /^1[0-9]{10}$/;
+	if(str.test($(this).val())==false){
+		$(".input5 h4").css("display","block")
+	}
+	$("#reg").css("margin-top","0");
+})
+</script>
